@@ -3,29 +3,702 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noitrez | AI Business Automation</title>
+
+    <title>Noitrez | AI & Business Automation</title>
+
+    <meta name="description"
+          content="Noitrez helps Northern Virginia businesses automate repetitive work with AI, software, and intelligent workflows.">
+
+    <meta name="theme-color" content="#0a0a0a">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                         Helvetica, Arial, sans-serif;
+            background: #080808;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #222;
+        }
+
+        .nav-inner {
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #7c5cff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .nav-button {
+            background: #7c5cff;
+            padding: 10px 18px;
+            border-radius: 7px;
+            color: white !important;
+            font-weight: 600;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 70px;
+            background:
+                radial-gradient(circle at 70% 30%, rgba(124,92,255,.16), transparent 35%),
+                radial-gradient(circle at 20% 80%, rgba(65,105,225,.08), transparent 30%);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: #a997ff;
+            border: 1px solid #342b63;
+            background: #12101f;
+            padding: 7px 13px;
+            border-radius: 999px;
+            font-size: .85rem;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 7vw, 6rem);
+            line-height: .98;
+            letter-spacing: -4px;
+            margin-bottom: 28px;
+        }
+
+        h1 span {
+            color: #8c72ff;
+        }
+
+        .hero p {
+            color: #aaa;
+            font-size: 1.25rem;
+            max-width: 680px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: .2s;
+        }
+
+        .button-primary {
+            background: #7c5cff;
+        }
+
+        .button-primary:hover {
+            background: #9278ff;
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            border: 1px solid #333;
+            color: #ddd;
+        }
+
+        .button-secondary:hover {
+            background: #151515;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 50px;
+        }
+
+        .section-heading h2 {
+            font-size: 2.7rem;
+            letter-spacing: -1.5px;
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            color: #999;
+            font-size: 1.05rem;
+        }
+
+        /* SERVICES */
+
+        .services {
+            background: #0d0d0d;
+            border-top: 1px solid #181818;
+            border-bottom: 1px solid #181818;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service {
+            background: #111;
+            border: 1px solid #242424;
+            border-radius: 12px;
+            padding: 30px;
+            transition: .2s;
+        }
+
+        .service:hover {
+            border-color: #51418e;
+            transform: translateY(-4px);
+        }
+
+        .service-number {
+            color: #8068ff;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .service h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+        }
+
+        .service p {
+            color: #999;
+            font-size: .95rem;
+        }
+
+        /* PROCESS */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .process-step {
+            padding: 25px 0;
+            border-top: 1px solid #333;
+        }
+
+        .process-step strong {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            color: #888;
+            font-size: .95rem;
+        }
+
+        /* DEMO */
+
+        .demo {
+            background: #0d0d0d;
+            border-top: 1px solid #181818;
+            border-bottom: 1px solid #181818;
+        }
+
+        .workflow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .workflow-box {
+            background: #151515;
+            border: 1px solid #303030;
+            padding: 18px 22px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 145px;
+        }
+
+        .workflow-box strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .workflow-box small {
+            color: #888;
+        }
+
+        .arrow {
+            color: #7c5cff;
+            font-size: 1.5rem;
+        }
+
+        /* CTA */
+
+        .cta {
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            color: #999;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #0d0d0d;
+            border-top: 1px solid #181818;
+        }
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .email {
+            display: inline-block;
+            color: #a997ff;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #222;
+            padding: 30px 0;
+            color: #666;
+            font-size: .85rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+            .nav-links {
+                display: none;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .service-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow {
+                flex-direction: column;
+            }
+
+            .arrow {
+                transform: rotate(90deg);
+            }
+
+            .footer-inner {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Noitrez</h1>
-    <h2>AI-powered business automation</h2>
 
-    <p>
-        We automate repetitive business processes so your team can
-        spend less time on administrative work and more time growing.
-    </p>
+<!-- NAVIGATION -->
 
-    <h2>What We Automate</h2>
+<nav>
+    <div class="container nav-inner">
 
-    <ul>
-        <li>Lead intake and follow-up</li>
-        <li>Data entry and processing</li>
-        <li>Document processing</li>
-        <li>AI-powered workflows</li>
-    </ul>
+        <a href="#" class="logo">
+            Noitrez<span>.</span>
+        </a>
 
-    <h2>Coming Soon</h2>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="#contact" class="nav-button">Free Audit</a>
+            </li>
+        </ul>
 
-    <p>Contact us for a free automation assessment.</p>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                AI & Business Automation · Northern Virginia
+            </div>
+
+            <h1>
+                Stop doing work<br>
+                <span>software can do.</span>
+            </h1>
+
+            <p>
+                Noitrez helps businesses eliminate repetitive administrative
+                work with practical AI, software, and automated workflows.
+            </p>
+
+            <div class="buttons">
+                <a href="#contact" class="button button-primary">
+                    Get a Free Automation Audit
+                </a>
+
+                <a href="#services" class="button button-secondary">
+                    See What We Automate
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>What we automate.</h2>
+
+            <p>
+                We focus on repetitive processes that consume employee time,
+                create errors, or cause businesses to lose opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service">
+
+                <div class="service-number">01</div>
+
+                <h3>Lead Automation</h3>
+
+                <p>
+                    Automatically capture, classify, organize and follow up
+                    with incoming leads so opportunities don't get lost.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">02</div>
+
+                <h3>Data & Documents</h3>
+
+                <p>
+                    Turn emails, PDFs, spreadsheets and other repetitive
+                    information-processing tasks into automated workflows.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">03</div>
+
+                <h3>AI Customer Intake</h3>
+
+                <p>
+                    Use AI to answer common questions, collect information,
+                    qualify customers and route important requests to staff.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section id="process">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Simple process. Real results.</h2>
+
+            <p>
+                No massive software implementation. We identify one useful
+                process and automate it.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process-step">
+                <strong>01 · Audit</strong>
+                <p>
+                    We identify repetitive work that costs your team time.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <strong>02 · Design</strong>
+                <p>
+                    We design an automated workflow around your existing tools.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <strong>03 · Build</strong>
+                <p>
+                    We build, test and deploy the automation.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <strong>04 · Improve</strong>
+                <p>
+                    We monitor the system and improve it as your business grows.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DEMO -->
+
+<section class="demo">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Example: automated lead handling</h2>
+
+            <p>
+                A process that normally requires several manual steps can
+                happen automatically.
+            </p>
+
+        </div>
+
+
+        <div class="workflow">
+
+            <div class="workflow-box">
+                <strong>New Lead</strong>
+                <small>Website form</small>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="workflow-box">
+                <strong>AI Analysis</strong>
+                <small>Classify & summarize</small>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="workflow-box">
+                <strong>CRM</strong>
+                <small>Store information</small>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="workflow-box">
+                <strong>Follow-up</strong>
+                <small>Automatic response</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>Find out what you can automate.</h2>
+
+        <p>
+            We'll identify one process in your business that could be
+            automated and show you what the solution could look like.
+        </p>
+
+        <a href="#contact" class="button button-primary">
+            Request a Free Audit
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <h2>Let's find something to automate.</h2>
+
+            <p>
+                Tell us what your business does and what repetitive tasks
+                consume the most time. We'll take a look.
+            </p>
+
+            <!-- REPLACE THIS EMAIL -->
+            <a class="button button-primary"
+               href="mailto:hello@noitrez.com">
+                Email Noitrez
+            </a>
+
+            <br>
+
+            <a class="email" href="mailto:hello@noitrez.com">
+                hello@noitrez.com
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div>
+            © 2026 Noitrez. All rights reserved.
+        </div>
+
+        <div>
+            AI & Business Automation · Northern Virginia
+        </div>
+
+    </div>
+
+</footer>
+
 </body>
 </html>
