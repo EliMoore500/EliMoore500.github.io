@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
     <meta name="description"
           content="Noitrez helps Northern Virginia businesses automate repetitive work with AI, software, and intelligent workflows.">
 
-    <meta name="theme-color" content="#0a0a0a">
+    <meta name="theme-color" content="#080808">
 
     <style>
         * {
@@ -39,8 +40,6 @@
             width: min(1100px, 92%);
             margin: auto;
         }
-
-        /* NAVIGATION */
 
         nav {
             position: fixed;
@@ -88,8 +87,6 @@
             color: white !important;
             font-weight: 600;
         }
-
-        /* HERO */
 
         .hero {
             min-height: 100vh;
@@ -166,8 +163,6 @@
             background: #151515;
         }
 
-        /* SECTIONS */
-
         section {
             padding: 100px 0;
         }
@@ -187,8 +182,6 @@
             color: #999;
             font-size: 1.05rem;
         }
-
-        /* SERVICES */
 
         .services {
             background: #0d0d0d;
@@ -231,8 +224,6 @@
             font-size: .95rem;
         }
 
-        /* PROCESS */
-
         .process-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -253,8 +244,6 @@
             color: #888;
             font-size: .95rem;
         }
-
-        /* DEMO */
 
         .demo {
             background: #0d0d0d;
@@ -293,8 +282,6 @@
             font-size: 1.5rem;
         }
 
-        /* CTA */
-
         .cta {
             text-align: center;
         }
@@ -310,8 +297,6 @@
             max-width: 600px;
             margin: 0 auto 30px;
         }
-
-        /* CONTACT */
 
         .contact {
             background: #0d0d0d;
@@ -334,14 +319,28 @@
             margin-bottom: 30px;
         }
 
-        .email {
-            display: inline-block;
-            color: #a997ff;
-            font-size: 1.1rem;
-            margin-top: 20px;
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
         }
 
-        /* FOOTER */
+        .contact-link {
+            display: inline-block;
+            border: 1px solid #333;
+            background: #111;
+            padding: 14px 20px;
+            border-radius: 8px;
+            color: #b8aaff;
+            transition: .2s;
+        }
+
+        .contact-link:hover {
+            border-color: #7c5cff;
+            background: #151515;
+        }
 
         footer {
             border-top: 1px solid #222;
@@ -355,8 +354,6 @@
             justify-content: space-between;
             gap: 20px;
         }
-
-        /* MOBILE */
 
         @media (max-width: 800px) {
             .nav-links {
@@ -389,8 +386,6 @@
 
 <body>
 
-<!-- NAVIGATION -->
-
 <nav>
     <div class="container nav-inner">
 
@@ -410,8 +405,6 @@
     </div>
 </nav>
 
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -450,8 +443,6 @@
 </section>
 
 
-<!-- SERVICES -->
-
 <section class="services" id="services">
 
     <div class="container">
@@ -471,7 +462,6 @@
         <div class="service-grid">
 
             <div class="service">
-
                 <div class="service-number">01</div>
 
                 <h3>Lead Automation</h3>
@@ -480,12 +470,10 @@
                     Automatically capture, classify, organize and follow up
                     with incoming leads so opportunities don't get lost.
                 </p>
-
             </div>
 
 
             <div class="service">
-
                 <div class="service-number">02</div>
 
                 <h3>Data & Documents</h3>
@@ -494,12 +482,10 @@
                     Turn emails, PDFs, spreadsheets and other repetitive
                     information-processing tasks into automated workflows.
                 </p>
-
             </div>
 
 
             <div class="service">
-
                 <div class="service-number">03</div>
 
                 <h3>AI Customer Intake</h3>
@@ -508,7 +494,6 @@
                     Use AI to answer common questions, collect information,
                     qualify customers and route important requests to staff.
                 </p>
-
             </div>
 
         </div>
@@ -517,8 +502,6 @@
 
 </section>
 
-
-<!-- PROCESS -->
 
 <section id="process">
 
@@ -573,8 +556,6 @@
 </section>
 
 
-<!-- DEMO -->
-
 <section class="demo">
 
     <div class="container">
@@ -626,8 +607,6 @@
 </section>
 
 
-<!-- CTA -->
-
 <section class="cta">
 
     <div class="container">
@@ -648,8 +627,6 @@
 </section>
 
 
-<!-- CONTACT -->
-
 <section class="contact" id="contact">
 
     <div class="container">
@@ -663,17 +640,28 @@
                 consume the most time. We'll take a look.
             </p>
 
-            <!-- REPLACE THIS EMAIL -->
-            <a class="button button-primary"
-               href="mailto:hello@noitrez.com">
-                Email Noitrez
-            </a>
+            <div class="contact-options">
 
-            <br>
+                <a class="contact-link"
+                   href="mailto:sales@noitrez.com">
+                    Contact Sales
+                </a>
 
-            <a class="email" href="mailto:hello@noitrez.com">
-                hello@noitrez.com
-            </a>
+                <a class="contact-link"
+                   href="mailto:hello@noitrez.com">
+                    General Inquiries
+                </a>
+
+            </div>
+
+            <div class="contact-options">
+
+                <a class="contact-link"
+                   href="mailto:elijah@noitrez.com">
+                    Contact Elijah
+                </a>
+
+            </div>
 
         </div>
 
@@ -681,8 +669,6 @@
 
 </section>
 
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -702,3 +688,4 @@
 
 </body>
 </html>
+```
